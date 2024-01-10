@@ -14,7 +14,7 @@ app.use(checkUser);
 
 app.use("/", indexRouter);
 
-const PORT = 4000;
+const PORT = process.env || 4000;
 
 // Запускаем сервер
 app.listen(PORT, () => {
