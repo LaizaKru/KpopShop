@@ -1,5 +1,6 @@
 type Track = {
-    group: string;
-    url: string;
-  };
-  export default Track;
+  group: string;
+  url: string;
+  id: number;
+};
+export default Track;

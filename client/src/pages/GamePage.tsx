@@ -4,13 +4,11 @@ import type { RootState } from '../redux/store';
 import { useAppDispatch } from '../redux/store';
 import type Card from '../redux/cards/types/card';
 import Button from 'react-bootstrap/Button';
-import { useNavigate } from 'react-router';
 
 function GamePage(): JSX.Element {
   const card = useSelector((state: RootState) => state.game.cards[state.game.cardIndex]);
   const score = useSelector((state: RootState) => state.game.score);
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('/api/cards')

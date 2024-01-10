@@ -26,7 +26,9 @@ function LogPage(): JSX.Element {
           alert(data.message);
         }
       } catch (error) {
-        alert(error.message);
+        if (error instanceof Error) {
+          alert(error.message);
+        }
       }
     },
     [email, password, dispatch, navigate],
